@@ -41,9 +41,6 @@ const Contact = () => {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
-        
-        e-commerce web site,
-        home,about and contact page create
         */}
 
       <div className="container">

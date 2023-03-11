@@ -10,6 +10,7 @@ import SingleProduct from './Componet/SingleProduct';
 import Header from './Componet/Header';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import Foot from './Componet/Foot';
 
 function App() {
 
@@ -55,9 +56,12 @@ function App() {
             element={<Navigate to="/" replace />}
           />
         </Routes>
+        <Foot />
       </BrowserRouter>
     </ThemeProvider>
   );
 }
+
+
 
 export default App;
