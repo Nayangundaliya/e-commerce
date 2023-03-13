@@ -14,7 +14,7 @@ const FearureProduct = () => {
     return <>
         <Wrapper className='section'>
             <div className="container">
-                <div className="intro-data">Check Now</div>
+                <h3 className="intro-data">Check Now</h3>
                 <div className="common-heading">Our Feature Services</div>
                 <div className="grid grid-three-column">
                     {

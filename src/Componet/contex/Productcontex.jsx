@@ -11,6 +11,8 @@ const initialState = {
     isError: false,
     products: [],
     featureProducts: [],
+    isSingleLoding: false,
+    singleProduct: {},
 };
 
 const AppProvider = ({ children }) => {
@@ -30,12 +32,25 @@ const AppProvider = ({ children }) => {
         }
     }
 
+    // single product api call
+
+    const getSingleProduct = async (url) => {
+        dispatch({type:"SINGLE_LODING"})
+        try {
+            const res = await axios.get(url);
+            const singleProduct = await res.data();
+            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct })
+        } catch (error) {
+            dispatch({ type: 'SINGLE_PRODUCT_ERROR' });
+        }
+    };
+
     useEffect(() => {
         getProducts(API);
     }, []);
 
     return <>
-        <AppContex.Provider value={{ ...state }}>{children}</AppContex.Provider>
+        <AppContex.Provider value={{ ...state, getSingleProduct }}>{children}</AppContex.Provider>
     </>
 };
 
