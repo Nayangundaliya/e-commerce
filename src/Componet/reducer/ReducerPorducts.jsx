@@ -50,7 +50,7 @@ const ProductReducer = (state, action) => {
             return{
                 ...state,
                 isSingleLoding: false,
-                isngleProduct: action.payload,
+                singleProduct: action.payload,
             } 
 
         case "SINGLE_PRODUCT_ERROR":

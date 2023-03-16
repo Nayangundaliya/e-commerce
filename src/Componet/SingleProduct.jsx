@@ -7,7 +7,8 @@ const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
 
-  const { getSingleProduct, isSingleLoding, SingleProduct } = useProductContex();
+  const { getSingleProduct, isSingleLoding, singleProduct } = useProductContex();
+  console.log(singleProduct);
   const { id } = useParams();
   console.log(id)
 
@@ -25,11 +26,7 @@ const SingleProduct = () => {
   //   stock,
   //   stars,
   //   reviews,
-  //   e-commerc web site,
-  //   api thru product data fatch
   // } = SingleProduct;
-
-  
 
   return (
     <Wrapper>
