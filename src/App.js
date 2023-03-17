@@ -6,7 +6,7 @@ import About from './Componet/About/About';
 import Cart from './Componet/Cart/Cart';
 import Contact from './Componet/Contact';
 import Product from './Componet/Product/Product';
-import SingleProduct from './Componet/SingleProduct';
+import SingleProduct from './Componet/Singleprod/SingleProduct';
 import Header from './Componet/Header';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -34,7 +34,7 @@ function App() {
     },
     media: {
       mobile: "768px",
-      tab:"998px",
+      tab: "998px",
     },
   }
 
@@ -43,7 +43,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyle />
-        <Header/>
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />

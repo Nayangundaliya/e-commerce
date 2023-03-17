@@ -5,7 +5,6 @@ import HomeProduct from './HomeProduct';
 
 const FearureProduct = () => {
     const { isLoding, featureProducts } = useProductContex();
-    console.log(featureProducts);
 
     if (isLoding) {
         return <div>......Loding</div>

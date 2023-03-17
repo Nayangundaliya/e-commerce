@@ -44,7 +44,7 @@ h1 {
 }
  h2 {
    color: ${({ theme }) => theme.colors.heading};
-   font-size: 3.4rem;
+   font-size: 2.4rem;
    font-weight: 300;
    white-space: normal;
   
@@ -55,7 +55,7 @@ h3 {
 }
 p, button {
   color: ${({ theme }) => theme.colors.text};
-  font-size: 1.65rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   font-weight:400;
 }
