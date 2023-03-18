@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 import { useProductContex } from '../contex/Productcontex';
-import PageNavigation from './PageNavigation';
-import MyImage from './MyImage';
 import { Container } from './Container';
-import FormatPrice from '../Helpers/FormatPrice';
 import { TbReplace, TbTruckDelivery } from 'react-icons/tb';
 import { MdSecurity } from 'react-icons/md';
+import styled from 'styled-components';
+import PageNavigation from './PageNavigation';
+import MyImage from './MyImage';
+import FormatPrice from '../Helpers/FormatPrice';
 import Starreview from './Starreview';
 import Addtocart from '../Cart/Addtocart';
 
@@ -16,6 +16,7 @@ const API = "https://api.pujakaitem.com/api/products";
 const SingleProduct = () => {
 
   const { getSingleProduct, isSingleLoding, singleProduct } = useProductContex();
+
   const { id } = useParams();
 
   useEffect(() => {
