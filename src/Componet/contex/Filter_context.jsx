@@ -7,7 +7,7 @@ const FilterContext = createContext();
 const initialState = {
     filter_products: [],
     all_products: [],
-    gird_view:true,
+    gird_view:false,
 }
 
 export const FilterContectProvider = ({ children }) => {
@@ -20,12 +20,16 @@ export const FilterContectProvider = ({ children }) => {
         return dispatch({ type: "SET_GRIDVIEW" });
     };
 
+    const setListView = () => {
+        return dispatch({ type: "SET_LISTVIEW" });
+    };
+
     useEffect(() => {
         dispatch({ type: "LOAD_FILTER_PRODUCT", payload: products });
     }, [products]);
 
     return (
-        <FilterContext.Provider value={{ ...state, setGridView }}>{children}</FilterContext.Provider>
+        <FilterContext.Provider value={{ ...state, setGridView, setListView }}>{children}</FilterContext.Provider>
     );
 };
 
