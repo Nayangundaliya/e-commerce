@@ -8,9 +8,9 @@ import Contact from './Componet/Contact';
 import Product from './Componet/Product/Product';
 import SingleProduct from './Componet/Singleprod/SingleProduct';
 import Header from './Componet/Header';
+import Foot from './Componet/Foot';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-import Foot from './Componet/Foot';
 
 function App() {
 

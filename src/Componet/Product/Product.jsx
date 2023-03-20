@@ -40,7 +40,4 @@ const Wrapper = styled.section`
   }
 `;
 
-// e-commerce website,
-// all product show page
-
 export default Product

@@ -10,8 +10,9 @@ const ListView = ({products}) => {
       <div className="grid container">
         {
           products.map((curElem)=>{
-            const {id, name, price, image, description} = curElem;
-            return(
+            const { id, name, price, image, description } = curElem;
+            
+            return (
               <div className="card grid grid-two-column">
                 <figure>
                   <img src={image} alt={name} />
