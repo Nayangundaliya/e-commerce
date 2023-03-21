@@ -22,7 +22,7 @@ const Wrapper = styled.section`
     max-width: 120rem;
   }
   .grid {
-    gap: 3.2rem;
+    gap: 1.2rem;
   }
   figure {
     width: auto;

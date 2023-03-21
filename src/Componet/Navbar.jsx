@@ -96,7 +96,7 @@ const Navbar = () => {
         height: 100vh;
         position: absolute;
         top: 0;
-        left: 0;
+        left: -280px;
         background-color: #fff;
         display: flex;
         justify-content: center;
@@ -106,7 +106,7 @@ const Navbar = () => {
         opacity: 0;
         transform: translateX(100%);
         /* transform-origin: top; */
-        transition: all 3s linear;
+        transition: all 2s linear;
       }
       .active .navbar-lists {
         visibility: visible;

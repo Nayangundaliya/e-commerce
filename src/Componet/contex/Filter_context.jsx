@@ -10,7 +10,12 @@ const initialState = {
     gird_view: true,
     sorting_value: "lowest",
     filters: {
-        text:"",
+        text: "",
+        category: "all",
+        color: "all",
+        maxPrice: 0,
+        price: 0,
+        minPrice: 0,
     },
 }
 
@@ -41,15 +46,24 @@ export const FilterContectProvider = ({ children }) => {
 
     const updateFilterValue = (event) => {
         let name = event.target.name;
-        let value = event.target.velue;
+        let value = event.target.value;
 
         return dispatch({ type: "UPDATE_FILTER_VALUE", payload: { name, value } });
+    };
+
+    // clear filter
+
+    const clearFilters = () => {
+        return dispatch({ type: "CLEAR_FILTERS" });
     }
 
     useEffect(() => {
         dispatch({ type: "FILTER_PRODUCTS" });
+    }, [products, state.filters])
+
+    useEffect(() => {
         dispatch({ type: "SORTING_PRODUCTS", payload: products });
-    }, [products, state.sorting_value, state.filters]);
+    }, [products, state.sorting_value]);
 
     useEffect(() => {
         dispatch({ type: "LOAD_FILTER_PRODUCT", payload: products });
@@ -63,6 +77,7 @@ export const FilterContectProvider = ({ children }) => {
                 setListView,
                 sorting,
                 updateFilterValue,
+                clearFilters,
             }}>{children}
         </FilterContext.Provider>
     );

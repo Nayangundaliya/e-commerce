@@ -9,7 +9,7 @@ const Product = () => {
   return (
     <>
       <Wrapper>
-        <div className="container grid grid-filter-column">
+        <div className="container  grid grid-filter-column">
           <div>
             <FilterSection />
           </div>
