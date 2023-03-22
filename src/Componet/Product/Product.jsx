@@ -35,7 +35,7 @@ const Wrapper = styled.section`
 
   @media(max-width: ${({ theme }) => theme.media.mobile}){
     .grid-filter-column{
-      grid-template-columns: 0.6fr;
+      grid-template-columns: 1.6fr;
     }
   }
 `;

@@ -1,10 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 import CartItem from './CartItem';
-import {useCartContext} from "../contex/cartContext"
+import { useCartContext } from "../contex/cartContext"
+import { NavLink } from 'react-router-dom';
+import { Button } from '../Button';
+import FormatPrice from '../Helpers/FormatPrice';
 
 const Cart = () => {
-  const {cart}= useCartContext();
+  const { cart, clearCart, total_price, shipping_fee } = useCartContext();
+
+
+  if (cart.length === 0) {
+    return (
+      <h1>No Cart Item</h1>
+    )
+  }
   return (
     <Wrapper>
       <div className="container">
@@ -19,10 +29,40 @@ const Cart = () => {
 
         <div className="cart-item">
           {
-            cart.map((curElem)=>{
-              return <CartItem key={curElem.id} {...curElem}/>
+            cart.map((curElem) => {
+              return <CartItem key={curElem.id} {...curElem} />
             })
           }
+        </div>
+        <hr />
+        <div className="cart-two-button">
+          <NavLink to="/product">
+            <Button>Continue Shopping</Button>
+          </NavLink>
+          <Button className='btn btn-clear' onClick={clearCart}>Clear Cart</Button>
+        </div>
+        <div className="order-total--amount">
+          <div className="order-total--subdata">
+            <div>
+              <p>Subtotal:</p>
+              <p>
+                <FormatPrice price={total_price} />
+              </p>
+            </div>
+            <div>
+              <p>Shipping Fee:</p>
+              <p>
+                <FormatPrice price={shipping_fee} />
+              </p>
+            </div>
+            <hr />
+            <div>
+              <p>Total Amount:</p>
+              <p>
+                <FormatPrice price={shipping_fee + total_price} />
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -30,7 +70,7 @@ const Cart = () => {
 }
 
 const Wrapper = styled.section`
-  padding: 9rem 0;
+  padding: 2rem 0;
   .grid-four-column {
     grid-template-columns: repeat(4, 1fr);
   }

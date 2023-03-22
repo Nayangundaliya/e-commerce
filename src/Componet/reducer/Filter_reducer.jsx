@@ -1,4 +1,3 @@
-import { RiH1 } from "react-icons/ri";
 
 const filterReducer = (state, action) => {
     switch (action.type) {

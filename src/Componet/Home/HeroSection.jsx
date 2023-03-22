@@ -31,7 +31,7 @@ const HeroSection = ( props ) => {
   );
 };
 const Wrapper = styled.section`
-  padding:10rem;
+  padding:2rem;
   img {
     min-width: 10rem;
     height: 5rem;
