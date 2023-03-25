@@ -48,6 +48,9 @@ const CartProvider = ({ children }) => {
 
     useEffect(() => {
         dispatch({ type: "CART_TOTAL_ITEM" });
+    },[state.cart])
+
+    useEffect(() => {
         dispatch({ type: "CART_TOTAL_PRICE" });
     },[state.cart])
 

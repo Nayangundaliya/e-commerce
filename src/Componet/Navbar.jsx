@@ -182,7 +182,7 @@ const Navbar = () => {
           </li>
           <li>
           {
-            isAuthenticated && <h4 style={{ color:'Red' }}>{ user.name}</h4>
+            isAuthenticated && <h4 style={{ color:'rgb(98, 84, 243)' }}>{ user.name}</h4>
             }
           </li>
           {
