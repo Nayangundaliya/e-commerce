@@ -8,11 +8,15 @@ const getLocalCartData = () => {
 
     let newCartData = localStorage.getItem('data');
 
-    if (newCartData === []) {
-        return [];
-    } else {
-        return JSON.parse(newCartData);
-    }
+    // if (newCartData === []) {
+    //     return [];
+    // } else {
+    //     return JSON.parse(newCartData);
+    // }
+
+    const parsedData = JSON.parse(newCartData);
+    if(!Array.isArray(parsedData)) return[];
+    return parsedData;
 };
 
 const initialState = {
