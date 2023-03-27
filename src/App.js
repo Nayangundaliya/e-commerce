@@ -45,15 +45,15 @@ function App() {
         <GlobalStyle />
         <Header />
         <Routes>
-          <Route path='e-commerce/' element={<Home />} />
-          <Route path='e-commerce/about' element={<About />} />
-          <Route path='e-commerce/product' element={<Product />} />
-          <Route path='e-commerce/singleproduct/:id' element={<SingleProduct />} />
-          <Route path='e-commerce/cart' element={<Cart />} />
-          <Route path='e-commerce/contact' element={<Contact />} />
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='product' element={<Product />} />
+          <Route path='singleproduct/:id' element={<SingleProduct />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='contact' element={<Contact />} />
           <Route
             path="*"
-            element={<Navigate to="e-commerce/" replace />}
+            element={<Navigate to="/" replace />}
           />
         </Routes>
         <Foot />
